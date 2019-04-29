@@ -32,17 +32,9 @@ def recommend(request):
             print(companies[co].pk)
             co+= 1
 
-      # return HttpResponse(companies)
       responseData = {
         'recommended_companies' : rec
       }
-      # response_data = {}
-      # try:
-      #       response_data['result'] = 'Success'
-      #       response_data['recommended_companies'] = serializers.serialize('json', companies)
-      # except:
-      #       response_data['result'] = 'Ouch!'
-      #       response_data['recommended_companies'] = 'Script has not ran correctly'
       return JsonResponse(responseData)
 
 
@@ -62,19 +54,10 @@ def recommendUsers(request):
                         'user_score' : field.field_test_score
                   }
             )
-            print(users[co].pk)
             co+= 1
 
-      # return HttpResponse(companies)
       responseData = {
         'recommended_users' : rec
       }
-      # response_data = {}
-      # try:
-      #       response_data['result'] = 'Success'
-      #       response_data['recommended_companies'] = serializers.serialize('json', companies)
-      # except:
-      #       response_data['result'] = 'Ouch!'
-      #       response_data['recommended_companies'] = 'Script has not ran correctly'
       return JsonResponse(responseData)
 
