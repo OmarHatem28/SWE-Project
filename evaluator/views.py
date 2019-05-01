@@ -8,7 +8,7 @@ from django.core import serializers
 # Create your views here.
 
 def index(request):
-      return HttpResponse("Hello, world")
+      return HttpResponse("Hello, world this is the index page")
 
 def detail(request, company_id):
     return HttpResponse("You're looking at company %s." % company_id)
